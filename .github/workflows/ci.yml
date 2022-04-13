@@ -20,7 +20,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 11
@@ -37,8 +37,6 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: donsbx/demo-app
-        tags: v1, latest
-        registry: registry-url.io
-        dockerfile: Dockerfile.ci
+        registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
