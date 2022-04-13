@@ -36,7 +36,7 @@ jobs:
     - name: Build & push Docker image 
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: donsbx/demo-app:tagname
+        image: donsbx/demo-app
         tags: v1, latest
         registry: registry-url.io
         dockerfile: Dockerfile.ci
